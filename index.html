@@ -14,17 +14,8 @@
 
 </head>
 <body>
-
-	<div id="wrapper">
       
-        
-        <div id="page-wrapper">
-        	<a ui-sref="dashboard">Dashboard</a>
-        	<div ui-view></div>
-        </div>
-
-    </div>
-    <!-- /#wrapper -->
+	<div ui-view ng-controller="MainCtrl"></div>
 
     <footer>
     	<!-- bower:js -->
@@ -48,6 +39,9 @@
 
 	    <!-- Angular Services -->
 	    <script src="app/services/session.js"></script>
+	    <script src="app/services/authorization.js"></script>
+	    <script src="app/services/principal.js"></script>
+	    <script src="app/services/configuration.js"></script>
 
 	    <!-- Angular Controllers -->
 	    <script src="app/controllers/main.js"></script>
