@@ -1,0 +1,21 @@
+{
+  "name": "entymon/backoffice-material",
+  "version": "0.0.0",
+  "homepage": "https://github.com/entymon/backoffice-material",
+  "authors": [
+    "entymon <pawel.olejniczak.i@gmail.com>"
+  ],
+  "description": "backoffice in angular template system",
+  "keywords": [
+    "angular",
+    "material"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
