@@ -1,4 +1,4 @@
-backoffice
+application
 	.controller('MainCtrl',['$log','$scope','$state',
 		function ($log,$scope,$state) {
 

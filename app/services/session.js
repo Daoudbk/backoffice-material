@@ -1,4 +1,4 @@
-backoffice.service('sessionService', ['$http', function ($http) {
+application.service('sessionService', ['$http', function ($http) {
 	return {
 		set:function (key,value) {
 			return sessionStorage.setItem(key,value);
