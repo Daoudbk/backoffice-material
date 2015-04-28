@@ -1,47 +1,31 @@
 <!DOCTYPE html>
-<html ng-app="Backoffice">
-	<head>
-		<title>Material Backoffice</title>
-		<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<html ng-app="BackofficeApp">
+<head>
+	<title>Backoffice</title>
+	<meta charset="utf-8">
 
-		<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+</head>
+<body>
 
-		<link rel="stylesheet" href="assets/css/style.css">
-		<meta name="viewport" content="initial-scale=1" />
+	<div id="wrapper">
+      
+        
+        <div id="page-wrapper">
+        	<a ui-sref="dashboard">Dashboard</a>
+        	<div ui-view></div>
+        </div>
 
-		<!-- Angular Material Dependencies -->
-	    <script src="bower_components/angular/angular.min.js"></script>
-	    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-	    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-	    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
-	    <script src="bower_components/angular-material/angular-material.min.js"></script>
-	    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
-	    <script src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+    </div>
+    <!-- /#wrapper -->
 
-	    <!-- Angular Boot File -->
-	    <script src="app/boot.js"></script>
+    <footer>
+    	<!-- bower:js -->
 
-	    <!-- Angular Directives -->
-	    <script src="app/directives/directives.js"></script>
+    	<script src="bower_components/angular/angular.js"></script>
+    	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+		<script src="app/boot.js"></script>
+			
+    </footer>
 
-	    <!-- Angular Filters -->
-	    <script src="app/filters/filters.js"></script>
-
-	    <!-- Angular Services -->
-	    <script src="app/services/session.js"></script>
-
-	    <!-- Angular Controllers -->
-	    <script src="app/controllers/main.js"></script>
-	    <script src="app/controllers/dashboard.js"></script>
-	    <script src="app/controllers/login.js"></script>
-
-	</head>
-	<body>
-	
-	    <div ng-controller="MainCtrl">
-			<div ui-view></div>
-		</div>
-
-	</body>
+</body>
 </html>
