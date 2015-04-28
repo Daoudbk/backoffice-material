@@ -1,4 +1,4 @@
-var application = angular.module('BackofficeApp', [
+var application = angular.module('Backoffice', [
 		'ngResource',
 		'ui.router',
 		'ngFileUpload',
