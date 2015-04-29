@@ -3,43 +3,92 @@
 	<div layout="row">
 
 		<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
-	      	<md-toolbar class="md-theme-indigo">
-	        	<h1 class="md-toolbar-tools">Sidenav Left</h1>
+	      	<md-toolbar class="md-theme-light">
+	        	<h1 class="md-toolbar-tools">Dashboard</h1>
 	      	</md-toolbar>
 
-	      	<md-list ng-controller="TestCtrl">
+	      	<div layout="column">
 
-  <md-subheader class="md-no-sticky">Clickable Items with Secondary Controls</md-subheader>
-  <md-list-item ng-click="navigateTo('data usage', $event)">
-    <md-icon md-svg-icon="cached"></md-icon>
-    <p>Data Usage</p>
-  </md-list-item>
-  
-  
-  <md-divider></md-divider>
+      			<md-button class="md-button md-primary md-default-theme" ui-sref="dashboard">
+	      			<div flex layout="row">
+	      				<span flex="10"></span>
+	      				<h1 class="md-toolbar-tools">Posts</h1>
+	      				<span flex></span>
+	      			</div>
+	      		</md-button>
+	      		
+	      		<md-divider></md-divider>
 
-</md-list>
+	      		<md-button class="md-button md-primary md-default-theme" ui-sref="dashboard">
+	      			<div flex layout="row">
+	      				<span flex="10"></span>
+	      				<h1 class="md-toolbar-tools">Works</h1>
+	      				<span flex></span>
+	      			</div>
+	      		</md-button>
+	      		
+	      		<md-divider></md-divider>
 
+	      		<md-button class="md-button md-primary md-default-theme" ui-sref="dashboard">
+	      			<div flex layout="row">
+	      				<span flex="10"></span>
+	      				<h1 class="md-toolbar-tools">Galleries</h1>
+	      				<span flex></span>
+	      			</div>
+	      		</md-button>
+	      		
+	      		<md-divider></md-divider>
 
+	      		<md-button class="md-button md-primary md-default-theme" ui-sref="dashboard">
+	      			<div flex layout="row">
+	      				<span flex="10"></span>
+	      				<h1 class="md-toolbar-tools">Experience</h1>
+	      				<span flex></span>
+	      			</div>
+	      		</md-button>
+	      		
+	      		<md-divider></md-divider>
+
+	      		<md-button class="md-button md-primary md-default-theme" ui-sref="dashboard">
+	      			<div flex layout="row">
+	      				<span flex="10"></span>
+	      				<h1 class="md-toolbar-tools">Comments</h1>
+	      				<span flex></span>
+	      			</div>
+	      		</md-button>
+	      		
+	      		<md-divider></md-divider>
+
+	      		<md-button class="md-button md-primary md-default-theme" ui-sref="dashboard">
+	      			<div flex layout="row">
+	      				<span flex="10"></span>
+	      				<h1 class="md-toolbar-tools">About Me</h1>
+	      				<span flex></span>
+	      			</div>
+	      		</md-button>
+	      		
+			</div>
 	    </md-sidenav>
 
 	    <div layout="column" layout-fill>
 
-	    	<md-toolbar>
+	    	<md-toolbar layout="row" >
 		    	<div class="md-toolbar-tools">
-		      		<span>Backoffice</span>
+		      		<span>List of Posts</span>
 		      		<!-- fill up the space between left and right area -->
 		      		<span flex></span>
-			      	<md-button>
-			        	Right Bar Button
-			      	</md-button>
+		      		<div layout-align="space-around center">
+		      			<md-button class="md-raised md-primary" ng-click="toggleRight()">Search</md-button>
+		      			<md-button class="md-raised">View</md-button>
+			      		<md-button class="md-raised">Login</md-button>
+		      		</div>
 		    	</div>
 		  	</md-toolbar>
 
 		  	<md-content flex layout-padding>
 	      		<div layout="column" layout-fill layout-align="top center">
 	        		<div>
-	          			<md-button ng-click="toggleRight()" class="md-primary">Toggle right</md-button>
+	          			
 	        		</div>
 	      		</div>
 	      		<div flex></div>
@@ -50,19 +99,17 @@
 	    <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
 
       		<md-toolbar class="md-theme-light">
-        		<h1 class="md-toolbar-tools">Sidenav Right</h1>
+        		<h1 class="md-toolbar-tools">Search</h1>
       		</md-toolbar>
 
-      		<md-content ng-controller="RightCtrl" layout-padding>
+      		<md-content ng-controller="RightCtrl" layout="column" layout-padding>
         		<form>
           			<md-input-container>
             			<label for="testInput">Test input</label>
             			<input type="text" id="testInput" ng-model="data" md-sidenav-focus>
           			</md-input-container>
         		</form>
-		        <md-button ng-click="close()" class="md-primary">
-		          	Close Sidenav Right
-		        </md-button>
+		        <md-button ng-click="close()" class="md-primary">Close</md-button>
       		</md-content>
 
     	</md-sidenav>

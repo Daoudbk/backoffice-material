@@ -18,6 +18,10 @@ application
 		          },300);
 		      return debounceFn;
 		    };
+
+
+
+		    
 	}])
 	.controller('LeftCtrl', 
 		function ($scope, $timeout, $mdSidenav, $log) {
