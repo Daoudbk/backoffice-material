@@ -20,19 +20,10 @@ application
 		    };
 
 	}])
-	.controller('LeftCtrl', 
-		function ($scope, $timeout, $mdSidenav, $log) {
-    		$scope.close = function () {
-      			$mdSidenav('left').close().then(function () {
-          		$log.debug("close LEFT is done");
-        	});
-    	};
-  	})
-  	.controller('RightCtrl', 
+  	.controller('RightSidebarCtrl', 
   		function ($scope, $timeout, $mdSidenav, $log) {
    	 		$scope.close = function () {
       			$mdSidenav('right').close().then(function () {
-          		$log.debug("close RIGHT is done");
         	});
     	};
   	});
