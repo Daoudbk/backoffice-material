@@ -14,9 +14,15 @@ application
   		function ($stateProvider, $urlRouterProvider, $resourceProvider, $httpProvider,$mdThemingProvider) {
 	        $stateProvider
 
+	        	// auth - authorisation resolver
+	        	.state('auth', {
+			        abstract: true,
+			        url: '',
+			        template: '<ui-view/>'
+			    })
+
 	        	// home
-	        	.state('dashboard', {
-	        		// abstract: true,
+	        	.state('auth.dashboard', {
 					url: '/',
 					controller: 'DashboardCtrl',
 					data: {
@@ -25,8 +31,8 @@ application
 					templateUrl: 'app/controllers/dashboard.html.tmpl'
 				})
 
-	        	.state('dashboard.post', {
-	        		url: '/post',
+	        	.state('auth.dashboard.post', {
+	        		url: 'post',
 	        		date: {
 	        			roles: []
 	        		},

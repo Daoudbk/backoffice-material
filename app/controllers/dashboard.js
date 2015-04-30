@@ -24,27 +24,27 @@ application
   		function ($scope, $timeout, $mdSidenav, $log) {
    	 		$scope.menuList = [
 					{
-						label: 'dashboard.post',
+						label: 'auth.dashboard.post',
 						name: 'Post'
 					},
 					{
-						label: 'dashboard',
+						label: 'auth.dashboard',
 						name: 'Works'
 					},
 					{
-						label: 'dashboard',
+						label: 'auth.dashboard',
 						name: 'Galleries'
 					},
 					{
-						label: 'dashboard',
+						label: 'auth.dashboard',
 						name: 'Experiences'
 					},
 					{
-						label: 'dashboard',
+						label: 'auth.dashboard',
 						name: 'Comments'
 					},
 					{
-						label: 'dashboard',
+						label: 'auth.dashboard',
 						name: 'About Me'
 					},
 				];
