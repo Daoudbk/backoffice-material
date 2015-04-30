@@ -19,14 +19,12 @@ application
 		      	return debounceFn;
 		    };
 
-		    $state.go('dashboard.post');
-
 	}])
   	.controller('DashboardMenuCtrl', 
   		function ($scope, $timeout, $mdSidenav, $log) {
    	 		$scope.menuList = [
 					{
-						label: 'dashboard',
+						label: 'dashboard.post',
 						name: 'Post'
 					},
 					{
