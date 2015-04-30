@@ -19,7 +19,38 @@ application
 		      	return debounceFn;
 		    };
 
+		    $state.go('dashboard.post');
+
 	}])
+  	.controller('DashboardMenuCtrl', 
+  		function ($scope, $timeout, $mdSidenav, $log) {
+   	 		$scope.menuList = [
+					{
+						label: 'dashboard',
+						name: 'Post'
+					},
+					{
+						label: 'dashboard',
+						name: 'Works'
+					},
+					{
+						label: 'dashboard',
+						name: 'Galleries'
+					},
+					{
+						label: 'dashboard',
+						name: 'Experiences'
+					},
+					{
+						label: 'dashboard',
+						name: 'Comments'
+					},
+					{
+						label: 'dashboard',
+						name: 'About Me'
+					},
+				];
+  	})
   	.controller('RightSidebarCtrl', 
   		function ($scope, $timeout, $mdSidenav, $log) {
    	 		$scope.close = function () {

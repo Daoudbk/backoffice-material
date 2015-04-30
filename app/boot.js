@@ -16,6 +16,7 @@ application
 
 	        	// home
 	        	.state('dashboard', {
+	        		// abstract: true,
 					url: '/',
 					controller: 'DashboardCtrl',
 					data: {
@@ -23,6 +24,19 @@ application
 					},
 					templateUrl: 'app/controllers/dashboard.html.tmpl'
 				})
+
+	        	.state('dashboard.post', {
+	        		url: '/post',
+	        		date: {
+	        			roles: []
+	        		},
+	        		views: {
+	        			'content': { 
+	        				templateUrl: 'app/controllers/post/list.html.tmpl',
+	        				controller: 'PostListCtrl', 
+	        			}
+	        		}
+	        	})
 
 	        	// login 
 	        	.state('login', {

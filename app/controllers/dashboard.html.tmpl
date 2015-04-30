@@ -7,65 +7,21 @@
 	        	<h1 class="md-toolbar-tools">Dashboard</h1>
 	      	</md-toolbar>
 
-	      	<div layout="column">
-
-      			<md-button class="md-button md-primary md-default-theme" ui-sref="dashboard">
-	      			<div flex layout="row">
-	      				<span flex="10"></span>
-	      				<h1 class="md-toolbar-tools">Posts</h1>
-	      				<span flex></span>
-	      			</div>
-	      		</md-button>
+	      	<div layout="column" ng-controller="DashboardMenuCtrl">
 	      		
-	      		<md-divider></md-divider>
+	      		<div flex ng-repeat="element in menuList">
 
-	      		<md-button class="md-button md-primary md-default-theme" ui-sref="dashboard">
-	      			<div flex layout="row">
-	      				<span flex="10"></span>
-	      				<h1 class="md-toolbar-tools">Works</h1>
-	      				<span flex></span>
-	      			</div>
-	      		</md-button>
-	      		
-	      		<md-divider></md-divider>
+	      			<md-button layout-fill class="md-button md-primary md-default-theme" ui-sref="{{ element.label }}">
+		      			<div layout="row">
+		      				<span flex="10"></span>
+		      				<h1 class="md-toolbar-tools">{{ element.name }}</h1>
+		      				<span flex></span>
+		      			</div>
+		      		</md-button>
+		      		
+		      		<md-divider></md-divider>
 
-	      		<md-button class="md-button md-primary md-default-theme" ui-sref="dashboard">
-	      			<div flex layout="row">
-	      				<span flex="10"></span>
-	      				<h1 class="md-toolbar-tools">Galleries</h1>
-	      				<span flex></span>
-	      			</div>
-	      		</md-button>
-	      		
-	      		<md-divider></md-divider>
-
-	      		<md-button class="md-button md-primary md-default-theme" ui-sref="dashboard">
-	      			<div flex layout="row">
-	      				<span flex="10"></span>
-	      				<h1 class="md-toolbar-tools">Experience</h1>
-	      				<span flex></span>
-	      			</div>
-	      		</md-button>
-	      		
-	      		<md-divider></md-divider>
-
-	      		<md-button class="md-button md-primary md-default-theme" ui-sref="dashboard">
-	      			<div flex layout="row">
-	      				<span flex="10"></span>
-	      				<h1 class="md-toolbar-tools">Comments</h1>
-	      				<span flex></span>
-	      			</div>
-	      		</md-button>
-	      		
-	      		<md-divider></md-divider>
-
-	      		<md-button class="md-button md-primary md-default-theme" ui-sref="dashboard">
-	      			<div flex layout="row">
-	      				<span flex="10"></span>
-	      				<h1 class="md-toolbar-tools">About Me</h1>
-	      				<span flex></span>
-	      			</div>
-	      		</md-button>
+	      		</div>	      		
 	      		
 			</div>
 	    </md-sidenav>
@@ -87,9 +43,7 @@
 
 		  	<md-content flex layout-padding>
 	      		<div layout="column" layout-fill layout-align="top center">
-	        		<div>
-	          			
-	        		</div>
+	        		<div ui-view="content"></div>
 	      		</div>
 	      		<div flex></div>
 	    	</md-content>
