@@ -16,6 +16,7 @@
 			</thead>
 
 			<tbody>
+
 				<tr ng-repeat="post in posts">
 					<td felx data-title="ID">{{ $index+1 }}</td>
 					<td flex data-title="Title">{{ post.title }}</td>
@@ -31,10 +32,28 @@
 						</div>
 					</td>
 				</tr>
-				
 
 			</tbody>
 		</table>
 	</div>
   
+</div>
+
+
+<div class="sample" layout="column">
+  <md-content class="md-padding">
+
+
+    <md-tabs md-selected="selectedIndex" md-border-bottom>
+      <md-tab ng-repeat="tab in tabs" ng-disabled="tab.disabled" label="{{tab.title}}">
+        <div class="demo-tab tab{{$index%4}}" style="padding: 25px; text-align: center;">
+          <div> {{ tab.content }} </div>
+        </div>
+      </md-tab>
+    </md-tabs>
+
+
+
+
+  </md-content>
 </div>
