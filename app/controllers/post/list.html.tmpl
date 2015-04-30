@@ -45,8 +45,8 @@
 
 
     <md-tabs md-selected="selectedIndex" md-border-bottom>
-      <md-tab ng-repeat="tab in tabs" ng-disabled="tab.disabled" label="{{tab.title}}">
-        <div class="demo-tab tab{{$index%4}}" style="padding: 25px; text-align: center;">
+      <md-tab ng-repeat="tab in tabs" label="{{tab.title}}">
+        <div>
           <div> {{ tab.content }} </div>
         </div>
       </md-tab>
