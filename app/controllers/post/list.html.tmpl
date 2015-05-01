@@ -1,4 +1,4 @@
-<div ng-controller="PostListCtrl" class="table-container">
+<div class="table-container">
  
   	<div class="table-responsive-vertical shadow-z-1">
   		<!-- Table starts here -->
@@ -47,7 +47,10 @@
     <md-tabs md-selected="selectedIndex" md-border-bottom>
       <md-tab ng-repeat="tab in tabs" label="{{tab.title}}">
         <div>
-          <div> {{ tab.content }} </div>
+          <!-- <div> {{ tab.content }} </div> -->
+          <div ng-repeat="test in tab.content">
+          		{{ test }}
+          </div>
         </div>
       </md-tab>
     </md-tabs>
