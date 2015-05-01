@@ -92,3 +92,6 @@ application
 		});
 
 	}]);
+
+// Links:
+// http://stackoverflow.com/questions/15535336/combating-angularjs-executing-controller-twice
