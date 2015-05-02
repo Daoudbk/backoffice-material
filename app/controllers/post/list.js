@@ -3,7 +3,7 @@ application
 		function ($log,$scope,$state,$timeout,$mdSidenav,$mdUtil) {
 
 			$scope.elementsPerPage = 5;
-		    $scope.posts = [
+		    $scope.elementsList = [
 		    	{
 		    		id: 1,
 		    		title: 'This is title',
@@ -62,33 +62,27 @@ application
 		    	},
 		    ];
 
-		$scope.totalElements = $scope.posts.length;
+		var begin = 0;
+		var end = begin + $scope.elementsPerPage;
+
+		$scope.posts = $scope.elementsList.slice(begin, end);
+		$scope.totalElements = $scope.elementsList.length;
 
 		// Always round number to up
 		var pages = Math.ceil($scope.totalElements / $scope.elementsPerPage);
+		var tabs = [];
 
-		$log.debug('pages');
-		$log.debug(pages);
-
-		var tabs = [
-			{ title: 1, content: ["Tabs will become paginated if there isn't enough room for them.","eqweqwe","weqweqw we qe"]},
-			{ title: 2, content: ["Tabs will become paginated if there isn't enough room for them.","eqweqwe","weqweqw we qe"]},
-			{ title: 3, content: ["You can bind the selected tab via the selected attribute on the md-tabs element."]},
-			// { title: 4, content: "If you set the selected tab binding to -1, it will leave no tab selected."},
-			// { title: 5, content: "If you remove a tab, it will try to select a new one."},
-			// { title: 6, content: "There's an ink bar that follows the selected tab, you can turn it off if you want."},
-			// { title: 7, content: "If you set ng-disabled on a tab, it becomes unselectable. If the currently selected tab becomes disabled, it will try to select the next tab."},
-			// { title: 8, content: "If you look at the source, you're using tabs to look at a demo for tabs. Recursion!"},
-			// { title: 9, content: "If you set md-theme=\"green\" on the md-tabs element, you'll get green tabs."},
-			// { title: 10, content: "If you're still reading this, you should just go check out the API docs for tabs!"}
-        ],
-        selected = null,
-        previous = null;
+		for (iteration = 0; iteration < pages; iteration++) { 
+		    tabs.push({title:iteration})
+		}
 
 	    $scope.tabs = tabs;
-	    $scope.selectedIndex = 2;
-	    $scope.$watch('selectedIndex', function(current, old){
-	   
+	    $scope.selectedPageIndex = 0;
+
+	    $scope.$watch('selectedPageIndex', function(current, old){
+	   		var begin = current * $scope.elementsPerPage;
+			var end = begin + $scope.elementsPerPage;
+			$scope.posts = $scope.elementsList.slice(begin, end); 
 		});
 
 	}]);

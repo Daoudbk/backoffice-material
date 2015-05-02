@@ -18,7 +18,7 @@
 			<tbody>
 
 				<tr ng-repeat="post in posts">
-					<td felx data-title="ID">{{ $index+1 }}</td>
+					<td felx data-title="ID">{{ post.id }}</td>
 					<td flex data-title="Title">{{ post.title }}</td>
 					<td flex data-title="Category">{{ post.category }}</td>
 					<td flex data-title="Content">{{ post.content }}</td>
@@ -44,14 +44,9 @@
   <md-content class="md-padding">
 
 
-    <md-tabs md-selected="selectedIndex" md-border-bottom>
-      <md-tab ng-repeat="tab in tabs" label="{{tab.title}}">
-        <div>
-          <!-- <div> {{ tab.content }} </div> -->
-          <div ng-repeat="test in tab.content">
-          		{{ test }}
-          </div>
-        </div>
+    <md-tabs md-selected="selectedPageIndex" md-border-bottom>
+      <md-tab ng-repeat="tab in tabs" label="{{$index+1}}">
+       
       </md-tab>
     </md-tabs>
 
