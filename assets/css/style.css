@@ -8,3 +8,12 @@
 td [data-title='created'] {
 	min-width: 60px;
 }
+.category-post-select{
+	padding: 11px;
+}
+.buttons-post-group {
+	padding-top: 16px;
+}
+.primary-ind-post {
+	margin-top: 1px;
+}
