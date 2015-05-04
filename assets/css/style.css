@@ -17,6 +17,10 @@ td [data-title='created'] {
 .primary-ind-post {
 	margin-top: 1px;
 }
+.login-form {
+	max-width: 460px;
+	min-width: 340px;
+}
 
 /*md-input-container.md-default-theme .md-input {
   color: white;

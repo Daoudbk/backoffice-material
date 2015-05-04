@@ -3,53 +3,40 @@
   	<md-content class="loginBoxTopMargin">
 
   		<div layout="row" layout-sm="column" layout-align="center center">
-
-		  	<div flex="30">
 		  		
-			    	<md-content layout-padding>
-				    	<md-whiteframe class="md-whiteframe-z1" layout="column">
-						    <form name="userForm" novalidate>
-						      	<md-content layout-padding>
-						      	<div layout="column" layout-sm="column">
+	    	<md-content layout-padding class="login-form">
+		    	<md-whiteframe class="md-whiteframe-z1" layout="column">
+				    <form name="userForm" novalidate>
+				      	<md-content layout-padding>
+				      	<div layout="column" layout-sm="column">
 
-							      	<md-content>
-							      		<h1 class="md-display-2">Sign In</h1>
-							      	</md-content>
+					      	<md-content>
+					      		<h1 class="md-display-2">Sign In</h1>
+					      	</md-content>
 
-						        	<md-input-container>
-						          		<label>Email</label>
-						          		<input ng-model="user.email" type="email" required>
-						        	</md-input-container>
+				        	<md-input-container>
+				          		<label>Email</label>
+				          		<input ng-model="user.email" type="email" required>
+				        	</md-input-container>
 
-			        				<md-input-container>
-						          		<label>Password</label>
-						          		<input ng-model="user.password" type="password" required>
-						        	</md-input-container>
+	        				<md-input-container>
+				          		<label>Password</label>
+				          		<input ng-model="user.password" type="password" required>
+				        	</md-input-container>
 
-						        	<md-content layout-padding>
-						        		<div layout="row" layout-sm="column">
-							      			<div flex>
-							      				<div layout layout-align="start center">
-							      					<md-button class="md-raised">Register</md-button>
-							      				</div>
-							      			</div>
-
-							      			<div flex>
-							      				<div layout layout-align="end center">
-							      					<md-button class="md-raised md-primary">Log In</md-button>
-							      				</div>
-							      			</div>
-								      	</div>
-							      	</md-content>
-
+				        	<md-content layout-padding>
+				        		<div layout="row" layout-align="space-between center">
+			      					<md-button class="md-raised">Register</md-button>
+			      					<md-button class="md-raised md-primary">Log In</md-button>
 						      	</div>
-						      	</md-content>
-						      
-						    </form>
-					   	</md-whiteframe>
-				  	</md-content>
+					      	</md-content>
 
-		  	</div>
+				      	</div>
+				      	</md-content>
+				      
+				    </form>
+			   	</md-whiteframe>
+		  	</md-content>
 
 		</div>
 
