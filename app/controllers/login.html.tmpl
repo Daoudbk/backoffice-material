@@ -6,7 +6,7 @@
 		  		
 	    	<md-content layout-padding class="login-form">
 		    	<md-whiteframe class="md-whiteframe-z1" layout="column">
-				    <form name="userForm" novalidate>
+				    <form name="loginForm" novalidate>
 				      	<md-content layout-padding>
 				      	<div layout="column" layout-sm="column">
 
@@ -16,12 +16,18 @@
 
 				        	<md-input-container>
 				          		<label>Email</label>
-				          		<input ng-model="user.email" type="email" required>
+				          		<input ng-model="user.email" name="email" type="email" required>
+				          		<div ng-messages="loginForm.email.$error">
+          							<div ng-message="required">This is required.</div>
+          						</div>
 				        	</md-input-container>
 
 	        				<md-input-container>
 				          		<label>Password</label>
-				          		<input ng-model="user.password" type="password" required>
+				          		<input ng-model="user.password" name="password" type="password" required>
+				          		<div ng-messages="loginForm.password.$error">
+          							<div ng-message="required">This is required.</div>
+          						</div>
 				        	</md-input-container>
 
 				        	<md-content layout-padding>

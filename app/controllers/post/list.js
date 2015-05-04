@@ -118,7 +118,9 @@ application
 
 		$scope.filters = {
 			postTitles: "",
-			category: ""
+			category: "",
+			dateTo: "",
+			dateFrom: ""
 		}
 
 		$scope.showConfirm = function(ev) {
