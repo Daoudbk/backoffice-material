@@ -32,14 +32,40 @@ application
 				})
 
 	        	.state('auth.dashboard.post', {
-	        		url: 'post',
+	        		url: 'post/',
 	        		date: {
 	        			roles: []
 	        		},
 	        		views: {
 	        			'content': { 
+	        				templateUrl: 'app/controllers/post/main.html.tmpl',
+	        				controller: 'PostMainCtrl', 
+	        			}
+	        		}
+	        	})
+
+	        	.state('auth.dashboard.post.list', {
+	        		url: 'list/',
+	        		date: {
+	        			roles: []
+	        		},
+	        		views: {
+	        			'post': { 
 	        				templateUrl: 'app/controllers/post/list.html.tmpl',
 	        				controller: 'PostListCtrl', 
+	        			}
+	        		}
+	        	})
+
+	        	.state('auth.dashboard.post.edit', {
+	        		url: 'edit/',
+	        		date: {
+	        			roles: []
+	        		},
+	        		views: {
+	        			'post': { 
+	        				templateUrl: 'app/controllers/post/edit.html.tmpl',
+	        				controller: 'PostEditCtrl', 
 	        			}
 	        		}
 	        	})

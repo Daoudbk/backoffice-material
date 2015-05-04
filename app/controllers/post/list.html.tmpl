@@ -1,4 +1,4 @@
-<div layout="row" layout-sm="column" class="search-from-post">
+<div layout="row" layout-sm="column">
 
 	<form layout-fill>
 
@@ -8,14 +8,13 @@
 			  	<md-content md-theme="docs-dark" layout-padding layout="row" layout-sm="column">
 					<md-input-container>
 						<label>Post Title</label>
-						<input ng-model="user.title">
+						<input ng-model="filters.postTitle">
 					</md-input-container>
 			  	</md-content>
 
 			  	<md-container layout-padding class="category-post-select">
-			        <md-select placeholder="Pick" ng-model="someVal">
-				    	<md-option value="1">One</md-option>
-				    	<md-option value="2">Two</md-option>
+			        <md-select placeholder="Category" ng-model="filters.category">
+				    	<md-option ng-repeat="cat in categories" value="{{ cat.id }}">{{ cat.name }}</md-option>
 				  	</md-select>
 			  	</md-container>
 		  	</md-container>
@@ -31,7 +30,7 @@
 
 				<md-container layout-padding layout-margin>
 					<md-input-container layout-align="center end">
-				  		<md-button class="md-raised md-primary primary-ind-post">Create New Post</md-button>
+				  		<md-button class="md-raised md-primary primary-ind-post" ui-sref="auth.dashboard.post.edit">Create New Post</md-button>
 				  	</md-input-container>
 			  	</md-container>
 			</md-container>
@@ -90,3 +89,5 @@
 		</md-tabs>
 	</md-content>
 </div>
+
+<div ui-view="test"></div>

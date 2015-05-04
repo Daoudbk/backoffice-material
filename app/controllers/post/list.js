@@ -2,7 +2,6 @@ application
 	.controller('PostListCtrl',['$log','$scope','$state','$timeout','$mdSidenav','$mdUtil',
 		function ($log,$scope,$state,$timeout,$mdSidenav,$mdUtil) {
 
-			$scope.elementsPerPage = 5;
 		    $scope.elementsList = [
 		    	{
 		    		id: 1,
@@ -101,6 +100,31 @@ application
 		    		created: '12:12:12 13-04-2015',
 		    	},
 		    ];
+
+		$scope.categories = [
+			{
+				id: 1,
+				name: 'category 1'
+			},
+			{
+				id: 2,
+				name: 'category 2'
+			},
+			{
+				id: 3,
+				name: 'category 3'
+			},
+		];
+
+		$scope.filters = {
+			postTitles: "",
+			category: ""
+		}
+
+		/**	
+		 * Pagination
+		 */
+		$scope.elementsPerPage = 5;
 
 		var begin = 0;
 		var end = begin + $scope.elementsPerPage;

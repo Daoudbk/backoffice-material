@@ -24,7 +24,7 @@ application
   		function ($scope, $timeout, $mdSidenav, $log) {
    	 		$scope.menuList = [
 					{
-						label: 'auth.dashboard.post',
+						label: 'auth.dashboard.post.list',
 						name: 'Post'
 					},
 					{
