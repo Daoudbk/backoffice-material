@@ -24,13 +24,13 @@
 		  	<md-container layout="row" layout-sm="column" class="buttons-post-group">
 			  	<md-container layout-padding layout-margin>
 				  	<md-input-container layout-align="center end">
-					  	<md-button class="md-raised" >Add New Category</md-button>
+					  	<md-button class="md-raised" ui-sref="auth.dashboard.post.category" >Add New Category</md-button>
 					</md-input-container>
 				</md-container>	
 
 				<md-container layout-padding layout-margin>
 					<md-input-container layout-align="center end">
-				  		<md-button class="md-raised md-primary primary-ind-post" ui-sref="auth.dashboard.post.edit">Create New Post</md-button>
+				  		<md-button class="md-raised md-primary primary-ind-post" ui-sref="auth.dashboard.post.create">Create New Post</md-button>
 				  	</md-input-container>
 			  	</md-container>
 			</md-container>
@@ -69,7 +69,7 @@
 					<td flex data-title="Created">{{ post.created }}</td>
 					<td flex data-title="Actions">
 						<div layout="row" layout-align="space-around center">
-							<md-button class="md-raised md-default-theme">Edit</md-button>
+							<md-button class="md-raised md-default-theme" ui-sref="auth.dashboard.post.edit" >Edit</md-button>
 							<div flex="5"></div>
 							<md-button class="md-raised md-warn md-default-theme">Delete</md-button>
 						</div>

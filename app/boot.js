@@ -70,6 +70,32 @@ application
 	        		}
 	        	})
 
+	        	.state('auth.dashboard.post.create', {
+	        		url: 'create/',
+	        		date: {
+	        			roles: []
+	        		},
+	        		views: {
+	        			'post': { 
+	        				templateUrl: 'app/controllers/post/create.html.tmpl',
+	        				controller: 'PostCreateCtrl', 
+	        			}
+	        		}
+	        	})
+
+	        	.state('auth.dashboard.post.category', {
+	        		url: 'category/',
+	        		date: {
+	        			roles: []
+	        		},
+	        		views: {
+	        			'post': { 
+	        				templateUrl: 'app/controllers/post/category.html.tmpl',
+	        				controller: 'PostCategoryCtrl', 
+	        			}
+	        		}
+	        	})
+
 	        	// login 
 	        	.state('login', {
 					url: '/login',
