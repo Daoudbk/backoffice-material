@@ -14,7 +14,8 @@ td [data-title='created'] {
 .buttons-post-group {
 	padding-top: 16px;
 }
-.primary-ind-post {
+.primary-ind-post, 
+.create-post-select {
 	margin-top: 1px;
 }
 .login-form {

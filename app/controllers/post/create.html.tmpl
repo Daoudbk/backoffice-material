@@ -1,53 +1,53 @@
+<div id="main-post-form">
+	
+	<div layout="row" layout-sm="column" layout-padding layout="space-between center">
 
+		<div flex layout="row" layout-align="start center">
+			<div layout-margin ><h1>Title post</h1></div>
+			<div layout-margin ><span>Create Post in </span></div>
+			<div flex layout-margin>
+				<md-select placeholder="Category" ng-model="filters.category" class="create-post-select">
+			    	<md-option ng-repeat="cat in categories" value="{{ cat.id }}">{{ cat.name }}</md-option>
+			  	</md-select>
+			</div>
+		</div>
 
-<div layout="row" layout-sm="column">
-  <md-content layout-padding layout-fill>
-    <form name="userForm">
-      <div layout layout-sm="column">
-        <md-input-container style="width:80%">
-            <label>Company (Disabled)</label>
-            <input ng-model="user.company" disabled>
-          </md-input-container>
-        <md-input-container flex>
-          <label>Submission Date</label>
-          <input type="date" ng-model="user.submissionDate">
-        </md-input-container>
-      </div>
-      <div layout layout-sm="column">
-        <md-input-container flex>
-          <label>First name</label>
-          <input ng-model="user.firstName">
-        </md-input-container>
-        <md-input-container flex>
-          <label>Last Name</label>
-          <input ng-model="theMax">
-        </md-input-container>
-      </div>
-      <md-input-container flex>
-        <label>Address</label>
-        <input ng-model="user.address">
-      </md-input-container>
-      <md-input-container md-no-float>
-        <input ng-model="user.address2" placeholder="Address 2">
-      </md-input-container>
-      <div layout layout-sm="column">
-        <md-input-container flex>
-          <label>City</label>
-          <input ng-model="user.city">
-        </md-input-container>
-        <md-input-container flex>
-          <label>State</label>
-          <input ng-model="user.state">
-        </md-input-container>
-        <md-input-container flex>
-          <label>Postal Code</label>
-          <input ng-model="user.postalCode">
-        </md-input-container>
-      </div>
-      <md-input-container flex>
-        <label>Biography</label>
-        <textarea ng-model="user.biography" columns="1" md-maxlength="150"></textarea>
-      </md-input-container>
-    </form>
-  </md-content>
+		<div flex layout="row" layout-align="end center">
+			<div layout-margin ><md-button class="md-raised">Save</md-button></div>
+	      	<div layout-margin ><md-button class="md-raised md-primary">Save & Publish</md-button></div>
+	      	<div layout-margin ><md-button class="md-raised md-warn">Back To List</md-button></div>
+		</div>
+		
+	</div>
+
+	<div layout="row" layout-sm="column">
+		<md-content layout-padding layout-fill>
+			<form name="postForm">
+
+				<div layout layout-sm="column" layout-align="center center">
+					<md-input-container flex>
+						<label>Post Title</label>
+						<input ng-model="post.title">
+					</md-input-container>
+					
+				</div>
+
+				<md-input-container flex>
+					<label>Header</label>
+					<textarea ng-model="post.header" columns="1" md-maxlength="300"></textarea>
+				</md-input-container>
+
+				<md-input-container flex>
+					<label>Content</label>
+					<textarea ng-model="post.content" columns="1"></textarea>
+				</md-input-container>
+			</form>
+		</md-content>
+	</div>
+
+</div>
+
+<div id="gallery">
+	
+
 </div>
