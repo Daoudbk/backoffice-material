@@ -28,8 +28,7 @@
 					<md-input-container flex>
 						<label>Post Title</label>
 						<input ng-model="post.title">
-					</md-input-container>
-					
+					</md-input-container>	
 				</div>
 
 				<md-input-container flex>
@@ -47,9 +46,19 @@
 
 </div>
 
-<div id="gallery" ng-controller="CreatePostGalleryCtrl" layout-padding> 
+<!-- one selected TRUE set as header image , rest of all will e disabled -->
+<div id="gallery" ng-controller="CreatePostGalleryCtrl"> 
 
-	<div layout-margin layout-padding><h1>Gallery</h1></div>
+	<div layout="row" layout-sm="column" layout-padding layout-align="space-between center">
+		<div layout="row" layout-align="start center" layout-margin>
+			<div layout-padding><h1>Gallery</h1></div>
+			<div layout-padding><span>Selected head image: Yes</span></div>
+		</div>
+		
+		<div layout-margin ><md-button class="md-raised">Save Changes</md-button></div>
+	</div>
+
+	
 
 	<md-container layout="row" layout-sm="column" layout-wrap>
 
@@ -61,9 +70,9 @@
 				<div><p>Content</p></div>
 			</div>
 			
-			<div layout="row">
+			<div layout="row" layout-align="center center">
 				<div layout-margin ><md-button class="md-raised">Upload</md-button></div>
-		      	<div layout-margin ><md-button class="md-raised">Set Header</md-button></div>
+		      	<div layout-margin><md-switch ng-disabled="true" aria-label="Disabled switch" ng-model="disabledModel"></md-switch></div>
 		      	<div layout-margin ><md-button class="md-raised md-warn">Remove</md-button></div>
 			</div>
 
@@ -77,9 +86,9 @@
 				<div><p>Content</p></div>
 			</div>
 			
-			<div layout="row">
+			<div layout="row" layout-align="center center">
 				<div layout-margin ><md-button class="md-raised">Upload</md-button></div>
-		      	<div layout-margin ><md-button class="md-raised">Set Header</md-button></div>
+		      	<div layout-margin><md-switch ng-disabled="true" aria-label="Disabled switch" ng-model="disabledModel"></md-switch></div>
 		      	<div layout-margin ><md-button class="md-raised md-warn">Remove</md-button></div>
 			</div>
 
@@ -93,9 +102,9 @@
 				<div><p>Content</p></div>
 			</div>
 			
-			<div layout="row">
+			<div layout="row" layout-align="center center">
 				<div layout-margin ><md-button class="md-raised">Upload</md-button></div>
-		      	<div layout-margin ><md-button class="md-raised">Set Header</md-button></div>
+		      	<div layout-margin ><md-switch ng-model="data.cb1" aria-label="Switch 1"></md-switch></div>
 		      	<div layout-margin ><md-button class="md-raised md-warn">Remove</md-button></div>
 			</div>
 
@@ -109,9 +118,9 @@
 				<div><p>Content</p></div>
 			</div>
 			
-			<div layout="row">
+			<div layout="row" layout-align="center center">
 				<div layout-margin ><md-button class="md-raised">Upload</md-button></div>
-		      	<div layout-margin ><md-button class="md-raised">Set Header</md-button></div>
+		      	<div layout-margin><md-switch ng-disabled="true" aria-label="Disabled switch" ng-model="disabledModel"></md-switch></div>
 		      	<div layout-margin ><md-button class="md-raised md-warn">Remove</md-button></div>
 			</div>
 
@@ -126,13 +135,24 @@
 				<div><p>Content</p></div>
 			</div>
 			
-			<div layout="row">
+			<div layout="row" layout-align="center center">
 				<div layout-margin ><md-button class="md-raised">Upload</md-button></div>
-		      	<div layout-margin ><md-button class="md-raised">Set Header</md-button></div>
+		      	<div layout-margin><md-switch ng-disabled="true" aria-label="Disabled switch" ng-model="disabledModel"></md-switch></div>
 		      	<div layout-margin ><md-button class="md-raised md-warn">Remove</md-button></div>
 			</div>
 
 		</div>
 
 	</md-container>
+</div>
+
+<div id="gallery" ng-controller="CreatePostGalleryCtrl"> 
+
+	<div layout="row" layout-padding layout-align="space-between center">
+		<div layout-margin layout-padding><h1>Comments</h1></div>
+	</div>
+
+	<md-container layout="row" layout-sm="column" layout-wrap>
+	</md-container>
+
 </div>
