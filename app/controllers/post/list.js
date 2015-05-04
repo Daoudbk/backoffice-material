@@ -1,6 +1,6 @@
 application
-	.controller('PostListCtrl',['$log','$scope','$state','$timeout','$mdSidenav','$mdUtil',
-		function ($log,$scope,$state,$timeout,$mdSidenav,$mdUtil) {
+	.controller('PostListCtrl',['$log','$scope','$state','$timeout','$mdSidenav','$mdUtil','$mdDialog',
+		function ($log,$scope,$state,$timeout,$mdSidenav,$mdUtil,$mdDialog) {
 
 		    $scope.elementsList = [
 		    	{
@@ -120,6 +120,22 @@ application
 			postTitles: "",
 			category: ""
 		}
+
+		$scope.showConfirm = function(ev) {
+	    	// Appending dialog to document.body to cover sidenav in docs app
+			var confirm = $mdDialog.confirm()
+				.title('Are you sure to delete this post?')
+				.content('Remember if you remove post then all assets belong to this one will be remove also')
+				.ariaLabel('Lucky day')
+				.ok('Please do it!')
+				.cancel('No, wait!')
+				.targetEvent(ev);
+			$mdDialog.show(confirm).then(function () {
+				$log.debug('Element was removed');
+			}, function() {
+				$log.debug('Keep element alive');
+			});
+	  	};
 
 		/**	
 		 * Pagination
