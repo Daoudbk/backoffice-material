@@ -125,7 +125,7 @@ application
 	    	// Appending dialog to document.body to cover sidenav in docs app
 			var confirm = $mdDialog.confirm()
 				.title('Are you sure to delete this post?')
-				.content('Remember if you remove post then all assets belong to this one will be remove also')
+				.content('Remember if you remove post then all assets belong to selected will be removed also.')
 				.ariaLabel('Lucky day')
 				.ok('Please do it!')
 				.cancel('No, wait!')
