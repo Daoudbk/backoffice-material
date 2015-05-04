@@ -2,7 +2,7 @@
 	
 	<div layout="row" layout-sm="column" layout-padding layout="space-between center">
 
-		<div flex layout="row" layout-align="start center">
+		<div flex layout="row" layout-sm="column" layout-align="start center">
 			<div layout-margin ><h1>Title post</h1></div>
 			<div layout-margin ><span>Create Post in </span></div>
 			<div flex layout-margin>
@@ -47,7 +47,92 @@
 
 </div>
 
-<div id="gallery">
-	
+<div id="gallery" ng-controller="CreatePostGalleryCtrl" layout-padding> 
 
+	<div layout-margin layout-padding><h1>Gallery</h1></div>
+
+	<md-container layout="row" layout-sm="column" layout-wrap>
+
+		<div layout-margin>
+			
+			<div layout="column" layout-padding>
+				<h4>Image title</h4>
+				<div><img ng-src="path/to/file"></div><!-- header should be 3:1 -->
+				<div><p>Content</p></div>
+			</div>
+			
+			<div layout="row">
+				<div layout-margin ><md-button class="md-raised">Upload</md-button></div>
+		      	<div layout-margin ><md-button class="md-raised">Set Header</md-button></div>
+		      	<div layout-margin ><md-button class="md-raised md-warn">Remove</md-button></div>
+			</div>
+
+		</div>
+
+		<div layout-margin>
+			
+			<div layout="column" layout-padding>
+				<h4>Image title</h4>
+				<div><img ng-src="path/to/file"></div><!-- header should be 3:1 -->
+				<div><p>Content</p></div>
+			</div>
+			
+			<div layout="row">
+				<div layout-margin ><md-button class="md-raised">Upload</md-button></div>
+		      	<div layout-margin ><md-button class="md-raised">Set Header</md-button></div>
+		      	<div layout-margin ><md-button class="md-raised md-warn">Remove</md-button></div>
+			</div>
+
+		</div>
+
+		<div layout-margin>
+			
+			<div layout="column" layout-padding>
+				<h4>Image title</h4>
+				<div><img ng-src="path/to/file"></div><!-- header should be 3:1 -->
+				<div><p>Content</p></div>
+			</div>
+			
+			<div layout="row">
+				<div layout-margin ><md-button class="md-raised">Upload</md-button></div>
+		      	<div layout-margin ><md-button class="md-raised">Set Header</md-button></div>
+		      	<div layout-margin ><md-button class="md-raised md-warn">Remove</md-button></div>
+			</div>
+
+		</div>
+
+		<div layout-margin>
+			
+			<div layout="column" layout-padding>
+				<h4>Image title</h4>
+				<div><img ng-src="path/to/file"></div><!-- header should be 3:1 -->
+				<div><p>Content</p></div>
+			</div>
+			
+			<div layout="row">
+				<div layout-margin ><md-button class="md-raised">Upload</md-button></div>
+		      	<div layout-margin ><md-button class="md-raised">Set Header</md-button></div>
+		      	<div layout-margin ><md-button class="md-raised md-warn">Remove</md-button></div>
+			</div>
+
+		</div>
+
+
+		<div layout-margin>
+			
+			<div layout="column" layout-padding>
+				<h4>Image title</h4>
+				<div><img ng-src="path/to/file"></div><!-- header should be 3:1 -->
+				<div><p>Content</p></div>
+			</div>
+			
+			<div layout="row">
+				<div layout-margin ><md-button class="md-raised">Upload</md-button></div>
+		      	<div layout-margin ><md-button class="md-raised">Set Header</md-button></div>
+		      	<div layout-margin ><md-button class="md-raised md-warn">Remove</md-button></div>
+			</div>
+
+		</div>
+
+	</md-container>
 </div>
