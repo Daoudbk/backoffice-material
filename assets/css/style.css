@@ -26,10 +26,31 @@ td [data-title='created'] {
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
+.exp-table :hover .select-image-layer {
+	display: block;
+}
+.select-image-layer .select-image-button {
+	margin-top: 100%;
+}
 .exp-image {
+	border: 1px solid grey;
 	width: 160px;
 	height: 160px;
-	background-color: lightgrey;
+	position: relative;
+}
+.exp-image img {
+	text-align: center;
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	top: 50%;
+	transform: 	translateY(-50%);
+}
+.exp-image .select-image-layer {
+	/*display: none;*/
+	position: absolute;
+	background-color: transparent;
+	z-index: 10;
 }
 .input-title {
 	font-weight: bold;
