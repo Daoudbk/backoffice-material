@@ -24,7 +24,7 @@ application
 			];
 		}
 	])
-	.controller('CreatePostGalleryCtrl',['$log','$scope','$state','$timeout','$mdSidenav','$mdUtil',
+	.controller('GalleryCtrl',['$log','$scope','$state','$timeout','$mdSidenav','$mdUtil',
 		function ($log,$scope,$state,$timeout,$mdSidenav,$mdUtil) {
 
 			var galleries = [
@@ -74,6 +74,55 @@ application
 			$scope.onChange = function(cbState) {
 				$scope.message = "The switch is now: " + cbState;
 			};
+
+			
+
+		}
+	])
+	.controller('CommentCtrl',['$log','$scope','$state','$timeout','$mdSidenav','$mdUtil',
+		function ($log,$scope,$state,$timeout,$mdSidenav,$mdUtil) {
+
+			$scope.phones = [
+		      { type: 'Home', number: '(555) 251-1234' },
+		      { type: 'Cell', number: '(555) 786-9841' },
+		    ];
+		    $scope.todos = [
+		      {
+		        face : '/images/60.jpeg',
+		        what: 'Brunch this weekend?',
+		        who: 'Min Li Chan',
+		        when: '3:08PM',
+		        notes: " I'll be in your neighborhood doing errands"
+		      },
+		      {
+		        face : '/images/60.jpeg',
+		        what: 'Brunch this weekend?',
+		        who: 'Min Li Chan',
+		        when: '3:08PM',
+		        notes: " I'll be in your neighborhood doing errands"
+		      },
+		      {
+		        face : '/images/60.jpeg',
+		        what: 'Brunch this weekend?',
+		        who: 'Min Li Chan',
+		        when: '3:08PM',
+		        notes: " I'll be in your neighborhood doing errands"
+		      },
+		      {
+		        face : '/images/60.jpeg',
+		        what: 'Brunch this weekend?',
+		        who: 'Min Li Chan',
+		        when: '3:08PM',
+		        notes: " I'll be in your neighborhood doing errands"
+		      },
+		      {
+		        face : '/images/60.jpeg',
+		        what: 'Brunch this weekend?',
+		        who: 'Min Li Chan',
+		        when: '3:08PM',
+		        notes: " I'll be in your neighborhood doing errands"
+		      },
+		    ];
 
 			
 
