@@ -110,6 +110,20 @@ application
 	        		}
 	        	})
 
+	        	// about
+	        	.state('auth.dashboard.works', {
+	        		url: 'works/',
+	        		date: {
+	        			roles: []
+	        		},
+	        		views: {
+	        			'content': { 
+	        				templateUrl: 'app/controllers/works/main.html.tmpl',
+	        				controller: 'WorkMainCtrl', 
+	        			}
+	        		}
+	        	})
+
 	        	// experience
 	        	.state('auth.dashboard.exp', {
 	        		url: 'exp/',

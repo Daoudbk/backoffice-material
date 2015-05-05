@@ -28,7 +28,7 @@ application
 						name: 'Post'
 					},
 					{
-						label: 'auth.dashboard',
+						label: 'auth.dashboard.works',
 						name: 'Works'
 					},
 					{
