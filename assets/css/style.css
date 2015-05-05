@@ -22,7 +22,10 @@ td [data-title='created'] {
 	max-width: 460px;
 	min-width: 340px;
 }
-
+.about-top {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
 /*md-input-container.md-default-theme .md-input {
   color: white;
   border-color: white;

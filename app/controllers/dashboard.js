@@ -44,7 +44,7 @@ application
 						name: 'Comments'
 					},
 					{
-						label: 'auth.dashboard',
+						label: 'auth.dashboard.about',
 						name: 'About Me'
 					},
 				];

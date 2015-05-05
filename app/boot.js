@@ -96,6 +96,20 @@ application
 	        		}
 	        	})
 
+	        	// about
+	        	.state('auth.dashboard.about', {
+	        		url: 'about/',
+	        		date: {
+	        			roles: []
+	        		},
+	        		views: {
+	        			'content': { 
+	        				templateUrl: 'app/controllers/about/main.html.tmpl',
+	        				controller: 'AboutMainCtrl', 
+	        			}
+	        		}
+	        	})
+
 	        	// login 
 	        	.state('login', {
 					url: '/login',
