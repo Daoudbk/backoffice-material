@@ -36,7 +36,7 @@ application
 						name: 'Galleries'
 					},
 					{
-						label: 'auth.dashboard',
+						label: 'auth.dashboard.exp',
 						name: 'Experiences'
 					},
 					{

@@ -26,6 +26,14 @@ td [data-title='created'] {
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
+.exp-image {
+	width: 160px;
+	height: 160px;
+	background-color: lightgrey;
+}
+.input-title {
+	font-weight: bold;
+}
 /*md-input-container.md-default-theme .md-input {
   color: white;
   border-color: white;

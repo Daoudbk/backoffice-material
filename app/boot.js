@@ -110,6 +110,20 @@ application
 	        		}
 	        	})
 
+	        	// experience
+	        	.state('auth.dashboard.exp', {
+	        		url: 'exp/',
+	        		date: {
+	        			roles: []
+	        		},
+	        		views: {
+	        			'content': { 
+	        				templateUrl: 'app/controllers/experience/main.html.tmpl',
+	        				controller: 'ExpMainCtrl', 
+	        			}
+	        		}
+	        	})
+
 	        	// login 
 	        	.state('login', {
 					url: '/login',
