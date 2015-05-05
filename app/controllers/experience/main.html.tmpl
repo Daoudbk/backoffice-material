@@ -29,7 +29,7 @@
 
 						<div class="exp-image" style="background: url('{{ exp.path }}') no-repeat center center">
 							<div class="select-image-layer" layout layout-padding layout-fill layout-align="center center">
-								<md-button>select</md-button>
+								<md-button class="select-image-button md-raised md-primary">select</md-button>
 							</div>
 						</div>
 
@@ -62,8 +62,10 @@
 					        </md-input-container>
 						</h4>
 
-						<div class="exp-image">
-							<img ng-src=""><!-- upload new image -->
+						<div class="exp-image" style="background: url('{{ exp.path }}') no-repeat center center">
+							<div class="select-image-layer" layout layout-padding layout-fill layout-align="center center">
+								<md-button class="md-raised md-primary">select</md-button>
+							</div>
 						</div>
 
 						<div>
@@ -74,7 +76,7 @@
 						</div>
 						
 						<div layout="row" layout-align="center center">
-							<div layout-margin ><md-button class="md-raised">save</md-button></div>
+							<div layout-margin ><md-button class="select-image-button md-raised md-warn">save</md-button></div>
 						</div>
 
 				  	</md-whiteframe>

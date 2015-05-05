@@ -29,8 +29,12 @@ td [data-title='created'] {
 .exp-table :hover .select-image-layer {
 	display: block;
 }
+.select-image-layer:hover .select-image-button {
+	display: block;
+}
 .select-image-layer .select-image-button {
-	margin-top: 100%;
+	display: none;
+/*	background-color: #FFF;*/
 }
 .exp-image {
 	border: 1px solid grey;
