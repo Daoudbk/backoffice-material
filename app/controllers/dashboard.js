@@ -40,10 +40,6 @@ application
 						name: 'Experiences'
 					},
 					{
-						label: 'auth.dashboard',
-						name: 'Comments'
-					},
-					{
 						label: 'auth.dashboard.about',
 						name: 'About Me'
 					},
