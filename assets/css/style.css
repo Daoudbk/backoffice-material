@@ -59,6 +59,15 @@ td [data-title='created'] {
 .input-title {
 	font-weight: bold;
 }
+.md-avatar {
+	width: 40px;
+	height: 40px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	margin-right: 16px;
+	border-radius: 50%;
+	box-sizing: content-box;
+}
 /*md-input-container.md-default-theme .md-input {
   color: white;
   border-color: white;
