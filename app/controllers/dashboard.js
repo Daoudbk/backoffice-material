@@ -32,7 +32,7 @@ application
 						name: 'Works'
 					},
 					{
-						label: 'auth.dashboard',
+						label: 'auth.dashboard.gallery',
 						name: 'Galleries'
 					},
 					{

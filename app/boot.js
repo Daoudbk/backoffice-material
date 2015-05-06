@@ -110,6 +110,20 @@ application
 	        		}
 	        	})
 
+				// gallery
+	        	.state('auth.dashboard.gallery', {
+	        		url: 'gallery/',
+	        		date: {
+	        			roles: []
+	        		},
+	        		views: {
+	        			'content': { 
+	        				templateUrl: 'app/controllers/gallery/main.html.tmpl',
+	        				controller: 'GalleryMainCtrl', 
+	        			}
+	        		}
+	        	})
+
 	        	// about
 	        	.state('auth.dashboard.works', {
 	        		url: 'works/',
