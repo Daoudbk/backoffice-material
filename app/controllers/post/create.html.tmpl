@@ -7,49 +7,51 @@
 	<md-content>
 		<md-list>
 			<md-list-item class="md-3-line" ng-repeat="item in todos">
-				<img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
-				<div class="md-list-item-text">
-				<h3>{{ item.who }}</h3>
-				<h4>{{ item.what }}</h4>
-				<p>{{ item.notes }}</p>
-				</div>
+                
+                <div layout="row" layout-sm="column" layout-margin layout-padding>
+                    <div flex="10" layout="row" layout-align="center center">
+                        <img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
+                    </div>
+                    <div flex="20" layout="column" layout-align="" class="comments-border">
+                        <h3 class="comments-owner-name">{{ item.who }}</h3>
+                        <span>email: {{ item.what }}</span>
+                    </div>
+                    <div flex layout layout-align="start start" class="comments-border">
+                        <p>{{ item.notes }}</p>
+                    </div>
+                    <div flex layout layout-align="center center">
+                        <md-button class="md-raised md-warn">remove</md-button>
+                    </div>
+                </div>
+				
+                <md-list-item class="md-3-line" ng-repeat="ans in item.answers">
+                    
+                    <div layout="row" layout-sm="column" layout-margin layout-padding>
+                        <div flex="10"></div>
+                        <div flex="10" layout="row" layout-align="center center">
+                            <img ng-src="{{ans.face}}?{{$index}}" class="md-avatar" alt="{{ans.who}}" />
+                        </div>
+                        <div flex="20" layout="column" layout-align="" class="comments-border">
+                            <h3 class="comments-owner-name">{{ ans.who }}</h3>
+                            <span>email: {{ ans.what }}</span>
+                        </div>
+                        <div flex layout layout-align="start start" class="comments-border">
+                            <p>{{ ans.notes }}</p>
+                        </div>
+                        <div flex layout layout-align="center center">
+                            <md-button class="md-raised md-warn">remove</md-button>
+                        </div>
+                        
+                    </div>
+                    
+                </md-list-item>
+                
+                <md-divider ng-if="!$last"></md-divider>
+                
 			</md-list-item>
 
 			<md-divider ></md-divider>
-
-			<md-subheader class="md-no-sticky">2 line item</md-subheader>
-
-			<md-list-item class="md-2-line">
-				<img ng-src="{{todos[0].face}}?20" class="md-avatar" alt="{{todos[0].who}}" />
-				<div class="md-list-item-text">
-				<h3>{{ todos[0].who }}</h3>
-				<p>Secondary text</p>
-				</div>
-			</md-list-item>
-
-			<md-divider ></md-divider>
-
-			<md-subheader class="md-no-sticky">3 line item, long paragraph (see on mobile)</md-subheader>
-
-			<md-list-item class="md-3-line">
-				<img ng-src="{{todos[0].face}}?25" class="md-avatar" alt="{{todos[0].who}}" />
-				<div class="md-list-item-text">
-				<h3>{{ todos[0].who }}</h3>
-				<p>Secondary line text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam massa quam.</p>
-				</div>
-			</md-list-item>
-
-			<md-divider ></md-divider>
-
-			<md-subheader class="md-no-sticky">md-offset class</md-subheader>
-
-			<md-list-item class="md-2-line" ng-repeat="phone in phones">
-				<md-icon md-svg-icon="communication:phone" ng-if="$index === 0"></md-icon>
-				<div class="md-list-item-text" ng-class="{'md-offset': $index != 0 }">
-				<h3> {{ phone.number }} </h3>
-				<p> {{ phone.type }} </p>
-				</div>
-			</md-list-item>
+            
 		</md-list>
   </md-content>
 

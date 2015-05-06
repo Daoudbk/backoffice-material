@@ -89,38 +89,72 @@ application
 		    $scope.todos = [
 		      {
 		        face : '/images/60.jpeg',
-		        what: 'Brunch this weekend?',
+		        what: 'test@test.com',
 		        who: 'Min Li Chan',
 		        when: '3:08PM',
-		        notes: " I'll be in your neighborhood doing errands"
+		        notes: " I'll be in your neighborhood doing errands",
+                answers: [
+                    {
+                        face : '/images/60.jpeg',
+                        what: 'test@test.com',
+                        who: 'Min Li Chan',
+                        when: '3:08PM',
+                        notes: " I'll be in your neighborhood doing errands"
+                    },
+                    {
+                        face : '/images/60.jpeg',
+                        what: 'test@test.com',
+                        who: 'Min Li Chan',
+                        when: '3:08PM',
+                        notes: " I'll be in your neighborhood doing errands"
+                    },
+                    {
+                        face : '/images/60.jpeg',
+                        what: 'test@test.com',
+                        who: 'Min Li Chan',
+                        when: '3:08PM',
+                        notes: " I'll be in your neighborhood doing errands"
+                    },
+                    {
+                        face : '/images/60.jpeg',
+                        what: 'test@test.com',
+                        who: 'Min Li Chan',
+                        when: '3:08PM',
+                        notes: " I'll be in your neighborhood doing errands"
+                    },
+                ]
 		      },
 		      {
 		        face : '/images/60.jpeg',
-		        what: 'Brunch this weekend?',
+		        what: 'test@test.com',
 		        who: 'Min Li Chan',
 		        when: '3:08PM',
-		        notes: " I'll be in your neighborhood doing errands"
+		        notes: " I'll be in your neighborhood doing errands",
+                answers: []
 		      },
 		      {
 		        face : '/images/60.jpeg',
-		        what: 'Brunch this weekend?',
+		        what: 'test@test.com',
 		        who: 'Min Li Chan',
 		        when: '3:08PM',
-		        notes: " I'll be in your neighborhood doing errands"
+		        notes: " I'll be in your neighborhood doing errands",
+                answers: []
 		      },
 		      {
 		        face : '/images/60.jpeg',
-		        what: 'Brunch this weekend?',
+		        what: 'test@test.com',
 		        who: 'Min Li Chan',
 		        when: '3:08PM',
-		        notes: " I'll be in your neighborhood doing errands"
+		        notes: " I'll be in your neighborhood doing errands",
+                answers: []
 		      },
 		      {
 		        face : '/images/60.jpeg',
-		        what: 'Brunch this weekend?',
+		        what: 'test@test.com',
 		        who: 'Min Li Chan',
 		        when: '3:08PM',
-		        notes: " I'll be in your neighborhood doing errands"
+		        notes: " I'll be in your neighborhood doing errands",
+                answers: []
 		      },
 		    ];
 

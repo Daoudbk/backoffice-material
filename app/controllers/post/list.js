@@ -1,5 +1,5 @@
 application
-	.controller('PostListCtrl',['$log','$scope','$state','$timeout','$mdSidenav','$mdUtil','$mdDialog',
+	.controller('PostListCtrl', ['$log', '$scope', '$state', '$timeout', '$mdSidenav', '$mdUtil', '$mdDialog', 
 		function ($log,$scope,$state,$timeout,$mdSidenav,$mdUtil,$mdDialog) {
 
 		    $scope.elementsList = [
