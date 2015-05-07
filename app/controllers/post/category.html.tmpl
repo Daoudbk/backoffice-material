@@ -44,9 +44,17 @@
 			<md-list-item ng-repeat="cat in categories">	
 				<md-content layout="row" layout-sm="column" layout-align="space-around center">
 					<div flex="10">{{ cat.id }}</div>
-					<div flex>{{ cat.name }}</div>
+					<div flex>
+						<md-input-container layout-margin>
+							<label for="label">Category Name</label>
+							<input type="text" id="label" ng-model="cat.name">
+						</md-input-container>
+					</div>
 					<div flex>{{ cat.totalItems }}</div>
-					<div flex><md-button ng-click="removeCategory(cat)" class="md-raised md-warn category-remove-button">Remove</md-button></div>
+					<div flex>
+						<md-button ng-click="confirmUpdateCategory($event,cat)" class="md-raised md-primary category-remove-button">Update</md-button>
+						<md-button ng-click="confirmRemoveCategory($event,cat)" class="md-raised md-warn category-remove-button">Remove</md-button>
+					</div>
 				</md-content>
 				
 				<md-divider class="category-divider" ng-if="!$last"></md-divider>

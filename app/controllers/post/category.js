@@ -1,7 +1,41 @@
 application
-	.controller('PostCategoryCtrl',['$log','$scope','$state','$timeout','$mdSidenav','$mdUtil',
-		function ($log,$scope,$state,$timeout,$mdSidenav,$mdUtil) {
+	.controller('PostCategoryCtrl',['$log','$scope','$state','$timeout','$mdSidenav','$mdUtil','$mdDialog',
+		function ($log,$scope,$state,$timeout,$mdSidenav,$mdUtil,$mdDialog) {
 			
+			$scope.confirmRemoveCategory = function(ev,cat) {
+
+				// Appending dialog to document.body to cover sidenav in docs app
+				var confirm = $mdDialog.confirm()
+					.title('Would you like to remove '+cat.name+'?')
+					.content('Remove or change category for all your posts before remove label.')
+					.ariaLabel('remove category label')
+					.ok('Please do it!')
+					.cancel('Not yet!')
+					.targetEvent(ev);
+
+				$mdDialog.show(confirm).then(function() {
+					if(cat.totalItems == 0) {
+						removeCategory(cat);
+					}
+				}, function() {});
+			};
+
+			$scope.confirmUpdateCategory = function(ev,cat) {
+
+				// Appending dialog to document.body to cover sidenav in docs app
+				var confirm = $mdDialog.confirm()
+					.title('Would you like to update '+cat.name+'?')
+					.content('Change will update database definitly.')
+					.ariaLabel('update category label')
+					.ok('Please update!')
+					.cancel('Not wait!')
+					.targetEvent(ev);
+
+				$mdDialog.show(confirm).then(function() {
+					updateCategory(cat)
+				}, function() {});
+			};
+
 			$scope.categories = [
 				{
 					id: 1,
@@ -41,9 +75,14 @@ application
 				);
 			}
 			
-			$scope.removeCategory = function (category) {
+			var removeCategory = function (category) {
 				var index = $scope.categories.indexOf(category);
       			$scope.categories.splice(index, 1);
+			}
+
+			var updateCategory = function (category) {
+				// var index = $scope.categories.indexOf(category);
+    			// $scope.categories.splice(index, 1, newCategory); // replace
 			}
 			
 		}
