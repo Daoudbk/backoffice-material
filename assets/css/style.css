@@ -75,6 +75,13 @@ td [data-title='created'] {
 .comment-answer-blocks {
     background-color: rgb(247, 247, 247);
 }
+.category-remove-button {
+	margin: 2px;
+}
+.category-divider {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
 /*md-input-container.md-default-theme .md-input {
   color: white;
   border-color: white;
