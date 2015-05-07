@@ -57,21 +57,8 @@ application
 	        		}
 	        	})
 
-	        	.state('auth.dashboard.post.edit', {
-	        		url: 'edit/',
-	        		date: {
-	        			roles: []
-	        		},
-	        		views: {
-	        			'post': { 
-	        				templateUrl: 'app/controllers/post/edit.html.tmpl',
-	        				controller: 'PostEditCtrl', 
-	        			}
-	        		}
-	        	})
-
 	        	.state('auth.dashboard.post.create', {
-	        		url: 'create/',
+	        		url: 'create/:id',
 	        		date: {
 	        			roles: []
 	        		},

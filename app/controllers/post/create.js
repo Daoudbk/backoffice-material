@@ -1,12 +1,137 @@
 application
-	.controller('PostCreateCtrl',['$log','$scope','$state','$timeout','$mdSidenav','$mdUtil',
-		function ($log,$scope,$state,$timeout,$mdSidenav,$mdUtil) {
+	.controller('PostCreateCtrl',['$log','$scope','$state','$stateParams','$timeout','$mdSidenav','$mdUtil',
+		function ($log,$scope,$state,$stateParams,$timeout,$mdSidenav,$mdUtil) {
 
 			$scope.post = {
 				title: '',
+				category: '',
 				header: '',
 				content: '',
+				author: '',
+				created: '',
 			}
+
+			var init = function () {
+
+				if(angular.isDefined($stateParams.id)) {
+					angular.forEach($scope.elementsList,function (value, key) {
+
+						if( parseInt(value.id) === parseInt($stateParams.id) ) {
+							$scope.post = value;
+						}
+					})
+				}
+			}
+
+			$scope.elementsList = [
+		    	{
+		    		id: 1,
+		    		title: 'This is title',
+		    		category: 'Spartan',
+		    		header: 'short story about',
+		    		content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		    		author: 'entymon',
+		    		created: '12:12:12 13-04-2015',
+		    	},
+		    	{
+		    		id: 2,
+		    		title: 'Thisisisisis is title',
+		    		category: 'Greek',
+		    		header: 'short story about',
+		    		content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		    		author: 'entymon',
+		    		created: '12:12:12 13-04-2015',
+		    	},
+		    	{
+		    		id: 3,
+		    		title: 'This is title',
+		    		category: 'Athenos',
+		    		header: 'short story about',
+		    		content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		    		author: 'admin',
+		    		created: '12:12:12 13-04-2015',
+		    	},
+		    	{
+		    		id: 4,
+		    		title: 'This is title',
+		    		category: 'Roman',
+		    		header: 'short story about',
+		    		content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		    		author: 'admin',
+		    		created: '12:12:12 13-04-2015',
+		    	},
+		    	{
+		    		id: 5,
+		    		title: 'This is title',
+		    		category: 'Babilnonian',
+		    		content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		    		author: 'user',
+		    		created: '12:12:12 13-04-2015',
+		    	},
+		    	{
+		    		id: 6,
+		    		title: 'This is title',
+		    		category: 'Babilnonian',
+		    		header: 'short story about',
+		    		content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		    		author: 'user',
+		    		created: '12:12:12 13-04-2015',
+		    	},
+		    	{
+		    		id: 7,
+		    		title: 'This is title',
+		    		category: 'Babilnonian',
+		    		header: 'short story about',
+		    		content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		    		author: 'user',
+		    		created: '12:12:12 13-04-2015',
+		    	},
+		    	{
+		    		id: 8,
+		    		title: 'This is title',
+		    		category: 'Babilnonian',
+		    		header: 'short story about',
+		    		content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		    		author: 'user',
+		    		created: '12:12:12 13-04-2015',
+		    	},
+		    	{
+		    		id: 9,
+		    		title: 'This is title',
+		    		category: 'Babilnonian',
+		    		header: 'short story about',
+		    		content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		    		author: 'user',
+		    		created: '12:12:12 13-04-2015',
+		    	},
+		    	{
+		    		id: 10,
+		    		title: 'This is title',
+		    		category: 'Babilnonian',
+		    		header: 'short story about',
+		    		content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		    		author: 'user',
+		    		created: '12:12:12 13-04-2015',
+		    	},
+		    	{
+		    		id: 11,
+		    		title: 'This is title',
+		    		category: 'Babilnonian',
+		    		header: 'short story about',
+		    		content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		    		author: 'user',
+		    		created: '12:12:12 13-04-2015',
+		    	},
+		    	{
+		    		id: 12,
+		    		title: 'This is title',
+		    		category: 'Babilnonian',
+		    		header: 'short story about',
+		    		content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+		    		author: 'user',
+		    		created: '12:12:12 13-04-2015',
+		    	},
+		    ];
 
 			$scope.categories = [
 				{
@@ -22,6 +147,8 @@ application
 					name: 'category 3'
 				},
 			];
+
+			init();
 		}
 	])
 	.controller('GalleryCtrl',['$log','$scope','$state','$timeout','$mdSidenav','$mdUtil',

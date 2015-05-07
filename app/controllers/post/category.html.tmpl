@@ -15,16 +15,16 @@
 	</div>
 
 	<md-content class="md-padding">
-		<form ng-submit="addCategory(label)" layout="column" class="md-padding" style="padding-top: 0;">
+		<form ng-submit="addCategory(categoryLabel)" layout="column" class="md-padding" style="padding-top: 0;">
 			<div layout="row" layout-sm="column" layout-align="start center">
 
 				<md-input-container layout-margin>
 					<label for="label">Label</label>
-					<input type="text" id="label" ng-model="label">
+					<input type="text" id="label" ng-model="categoryLabel">
 				</md-input-container>
 
 				<md-content layout-margin>
-					<md-button class="add-tab md-raised" ng-disabled="!label" type="submit" style="margin-right: 0;">Add New Category</md-button>
+					<md-button class="add-tab md-raised" ng-disabled="!categoryLabel" type="submit" style="margin-right: 0;">Add New Category</md-button>
 				</md-content>
 
 			</div>

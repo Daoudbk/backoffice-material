@@ -73,6 +73,7 @@ application
 						totalItems: 0
 					}
 				);
+				$scope.categoryLabel = "";
 			}
 			
 			var removeCategory = function (category) {

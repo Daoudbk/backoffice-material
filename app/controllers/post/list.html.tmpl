@@ -79,7 +79,7 @@
 					<td flex data-title="Created">{{ post.created }}</td>
 					<td flex data-title="Actions">
 						<div layout="row" layout-align="space-around center">
-							<md-button class="md-raised md-default-theme" ui-sref="auth.dashboard.post.edit" >Edit</md-button>
+							<md-button class="md-raised md-default-theme" ui-sref="auth.dashboard.post.create({id:post.id})" >Edit</md-button>
 							<div flex="5"></div>
 							<md-button class="md-raised md-warn md-default-theme" ng-click="showConfirm($event)">Delete</md-button>
 						</div>
